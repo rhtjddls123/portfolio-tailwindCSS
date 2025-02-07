@@ -39,11 +39,11 @@
         </ul>
       </nav>
     </header>
-    <main class="bg-gray-300 container max-w-4xl mx-auto px-6 py-12">
+    <main class="container max-w-4xl mx-auto px-6 py-12">
       <!-- Home Section -->
-      <section class="flex justify-between items-center">
+      <section id="home" class="flex justify-between items-center mb-12">
         <!-- profile image -->
-        <div class="shrink-0 mr-10 mb-12">
+        <div class="shrink-0 mr-10">
           <img
             class="w-56 h-56 rounded-full border-2 object-cover"
             src="https://api.dicebear.com/9.x/adventurer/svg?seed=Brian"
@@ -61,23 +61,52 @@
           </p>
         </div>
       </section>
+
       <!-- About Section -->
-      <section class="bg-yellow-200 h-60">
+      <section id="about" class="mb-16">
         <h2 class="text-3xl font-bold mb-6">소개</h2>
+        <div class="grid grid-cols-2 gap-6">
+          <article
+            class="bg-gray-100 shadow-md rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+          >
+            <h3 class="text-xl font-semibold mb-4">👨‍🎓 교육 및 활동</h3>
+            <ul class="text-gray-800 leading-relaxed">
+              <li>👉 2023 프론트엔드 개발자 인턴십 (ABC Tech)</li>
+              <li>👉 2022 웹 개발 부트캠프 수료 (XYZ Coding School)</li>
+              <li>👉 2021 오픈소스 프로젝트 참여 (오픈소스 커뮤니티)</li>
+              <li>👉 2020 대학 동아리 웹 개발 팀장 활동</li>
+            </ul>
+          </article>
+          <article
+            class="bg-gray-100 shadow-md rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+          >
+            <h3 class="text-xl font-semibold mb-4">🧑‍💻 자격증</h3>
+            <ul class="text-gray-800 leading-relaxed">
+              <li>👉 2023 정보처리기사</li>
+              <li>👉 2022 AWS Certified Solutions Architect</li>
+              <li>👉 2021 자바 프로그래밍 1급</li>
+              <li>👉 2020 웹디자인 기능사</li>
+            </ul>
+          </article>
+        </div>
       </section>
+
       <!-- Skills Section -->
       <section class="bg-blue-200 h-60">
         <h2 class="text-3xl font-bold mb-6">기술</h2>
       </section>
+
       <!-- Projects Section -->
       <section class="bg-cyan-200 h-60">
         <h2 class="text-3xl font-bold mb-6">프로젝트</h2>
       </section>
+
       <!-- Contect Section -->
       <section class="bg-green-200 h-60">
         <h2 class="text-3xl font-bold mb-6">연락처</h2>
       </section>
     </main>
+
     <!-- Footer Section -->
     <footer class="bg-gray-400 w-full h-20"></footer>
   </body>
