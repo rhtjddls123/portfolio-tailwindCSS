@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>개발자 포트폴리오</title>
     <link
       rel="stylesheet"
@@ -41,7 +41,26 @@
     </header>
     <main class="bg-gray-300 container max-w-4xl mx-auto px-6 py-12">
       <!-- Home Section -->
-      <section class="bg-red-200 h-60"></section>
+      <section class="flex justify-between items-center">
+        <!-- profile image -->
+        <div class="shrink-0 mr-10 mb-12">
+          <img
+            class="w-56 h-56 rounded-full border-2 object-cover"
+            src="https://api.dicebear.com/9.x/adventurer/svg?seed=Brian"
+            alt="avatar"
+          />
+        </div>
+        <!-- 소개 -->
+        <div class="text-right">
+          <h1 class="text-4xl font-bold mb-2">김개발</h1>
+          <p class="text-xl mb-4">혁신적인 개발자</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rem tempora officiis hic,
+            inventore praesentium sapiente magnam molestiae corporis odio expedita tempore
+            voluptates debitis, dignissimos culpa dolorum perspiciatis molestias nobis.
+          </p>
+        </div>
+      </section>
       <!-- About Section -->
       <section class="bg-yellow-200 h-60">
         <h2 class="text-3xl font-bold mb-6">소개</h2>
