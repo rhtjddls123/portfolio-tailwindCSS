@@ -12,15 +12,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      tailwind.config = {
+        darkMode: "selector"
+      };
+    </script>
   </head>
-  <body>
+  <body
+    class="dark:bg-gray-900 dark:text-white bg-white text-black min-h-screen transition-colors duration-300"
+  >
     <!-- Header Section -->
     <header class="sticky top-0 bg-opacity-90 backdrop-blur-lg z-10">
       <nav class="container max-w-4xl mx-auto px-6 py-3 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center space-x-4">
           <h1 class="text-2xl font-bold">김개발</h1>
-          <p class="text-sm text-gray-500">풀스택 개발자</p>
+          <p class="text-sm text-gray-500 dark:text-gray-300">풀스택 개발자</p>
         </div>
         <!-- Menu -->
         <ul class="flex items-center gap-x-6">
@@ -31,9 +38,10 @@
           <li><a href="#contact" class="hover:text-blue-500 transition-colors">연락처</a></li>
           <li>
             <button
-              class="p-2 w-10 h-10 rounded-full bg-gray-200 focus:outline-none focus:ring focus:ring-blue-500 cursor-pointer"
+              id="darkModeToggle"
+              class="p-2 w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-500 cursor-pointer"
             >
-              <i class="fas fa-moon text-gray-700"></i>
+              <i class="fas fa-moon text-gray-700 dark:text-yellow-400"></i>
             </button>
           </li>
         </ul>
@@ -54,7 +62,7 @@
         <div class="text-right">
           <h1 class="text-4xl font-bold mb-2">김개발</h1>
           <p class="text-xl mb-4">혁신적인 개발자</p>
-          <p>
+          <p class="text-gray-600 dark:text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rem tempora officiis hic,
             inventore praesentium sapiente magnam molestiae corporis odio expedita tempore
             voluptates debitis, dignissimos culpa dolorum perspiciatis molestias nobis.
@@ -67,10 +75,10 @@
         <h2 class="text-3xl font-bold mb-6">소개</h2>
         <div class="grid grid-cols-2 gap-6">
           <article
-            class="bg-gray-100 shadow-md rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-6 hover:scale-105 transition-transform duration-300"
           >
             <h3 class="text-xl font-semibold mb-4">👨‍🎓 교육 및 활동</h3>
-            <ul class="text-gray-800 leading-relaxed">
+            <ul class="text-gray-800 dark:text-gray-300 leading-relaxed">
               <li>👉 2023 프론트엔드 개발자 인턴십 (ABC Tech)</li>
               <li>👉 2022 웹 개발 부트캠프 수료 (XYZ Coding School)</li>
               <li>👉 2021 오픈소스 프로젝트 참여 (오픈소스 커뮤니티)</li>
@@ -78,10 +86,10 @@
             </ul>
           </article>
           <article
-            class="bg-gray-100 shadow-md rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-6 hover:scale-105 transition-transform duration-300"
           >
             <h3 class="text-xl font-semibold mb-4">🧑‍💻 자격증</h3>
-            <ul class="text-gray-800 leading-relaxed">
+            <ul class="text-gray-800 dark:text-gray-300 leading-relaxed">
               <li>👉 2023 정보처리기사</li>
               <li>👉 2022 AWS Certified Solutions Architect</li>
               <li>👉 2021 자바 프로그래밍 1급</li>
@@ -97,37 +105,37 @@
 
         <div class="grid grid-cols-3 gap-4">
           <div
-            class="flex flex-col items-center bg-gray-100 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
           >
             <i class="fa-brands fa-html5 text-4xl text-red-500 mb-1"></i>
             <h3 class="text-lg font-semibold">HTML5</h3>
           </div>
           <div
-            class="flex flex-col items-center bg-gray-100 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
           >
             <i class="fa-brands fa-css3-alt text-4xl text-blue-500 mb-1"></i>
             <h3 class="text-lg font-semibold">CSS3</h3>
           </div>
           <div
-            class="flex flex-col items-center bg-gray-100 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
           >
             <i class="fa-brands fa-js text-4xl text-yellow-400 mb-1"></i>
             <h3 class="text-lg font-semibold">JavaScript</h3>
           </div>
           <div
-            class="flex flex-col items-center bg-gray-100 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
           >
             <i class="fa-brands fa-react text-4xl text-blue-400 mb-1"></i>
             <h3 class="text-lg font-semibold">React</h3>
           </div>
           <div
-            class="flex flex-col items-center bg-gray-100 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
           >
             <i class="fa-brands fa-vuejs text-4xl text-green-400 mb-1"></i>
             <h3 class="text-lg font-semibold">Vue.js</h3>
           </div>
           <div
-            class="flex flex-col items-center bg-gray-100 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
+            class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg p-4 hover:scale-105 transition-transform duration-300"
           >
             <i class="fa-brands fa-node text-4xl text-green-500 mb-1"></i>
             <h3 class="text-lg font-semibold">Node.js</h3>
@@ -140,7 +148,7 @@
         <h2 class="text-3xl font-bold mb-6">프로젝트</h2>
         <div class="grid grid-cols-2 gap-6">
           <article
-            class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
               class="w-full h-48 object-cover"
@@ -148,27 +156,33 @@
               alt="전자상거래 플랫폼 이미지"
             />
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-4 text-gray-800">전자상거래 플랫폼</h3>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+                전자상거래 플랫폼
+              </h3>
               <div class="space-x-2 mb-4">
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >React</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Node.js</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Express</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >MongoDB</span
                 >
               </div>
               <div class="flex space-x-2">
-                <a href="#" class="text-sm bg-gray-800 text-white px-3 py-1 rounded-md">Github</a>
+                <a
+                  href="#"
+                  class="text-sm bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
+                  >Github</a
+                >
                 <a href="#" class="text-sm bg-blue-600 text-white px-3 py-1 rounded-md"
                   >라이브 데모</a
                 >
@@ -176,7 +190,7 @@
             </div>
           </article>
           <article
-            class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
               class="w-full h-48 object-cover"
@@ -184,27 +198,33 @@
               alt="작업 관리 앱 이미지"
             />
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-4 text-gray-800">작업 관리 앱</h3>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+                작업 관리 앱
+              </h3>
               <div class="space-x-2 mb-4">
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >React</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Redux</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Drag and Drop</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Firebase</span
                 >
               </div>
               <div class="flex space-x-2">
-                <a href="#" class="text-sm bg-gray-800 text-white px-3 py-1 rounded-md">Github</a>
+                <a
+                  href="#"
+                  class="text-sm bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
+                  >Github</a
+                >
                 <a href="#" class="text-sm bg-blue-600 text-white px-3 py-1 rounded-md"
                   >라이브 데모</a
                 >
@@ -212,7 +232,7 @@
             </div>
           </article>
           <article
-            class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
               class="w-full h-48 object-cover"
@@ -220,23 +240,29 @@
               alt="포트폴리오 웹사이트 이미지"
             />
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-4 text-gray-800">포트폴리오 웹사이트</h3>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+                포트폴리오 웹사이트
+              </h3>
               <div class="space-x-2 mb-4">
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >HTML</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >CSS</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >JavaScript</span
                 >
               </div>
               <div class="flex space-x-2">
-                <a href="#" class="text-sm bg-gray-800 text-white px-3 py-1 rounded-md">Github</a>
+                <a
+                  href="#"
+                  class="text-sm bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
+                  >Github</a
+                >
                 <a href="#" class="text-sm bg-blue-600 text-white px-3 py-1 rounded-md"
                   >라이브 데모</a
                 >
@@ -244,7 +270,7 @@
             </div>
           </article>
           <article
-            class="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
               class="w-full h-48 object-cover"
@@ -252,23 +278,29 @@
               alt="블로그 플랫폼 이미지"
             />
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-4 text-gray-800">블로그 플랫폼</h3>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+                블로그 플랫폼
+              </h3>
               <div class="space-x-2 mb-4">
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Next.js</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Tailwind CSS</span
                 >
                 <span
-                  class="bg-gray-200 text-sm px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-sm px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
                   >Markdown</span
                 >
               </div>
               <div class="flex space-x-2">
-                <a href="#" class="text-sm bg-gray-800 text-white px-3 py-1 rounded-md">Github</a>
+                <a
+                  href="#"
+                  class="text-sm bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
+                  >Github</a
+                >
                 <a href="#" class="text-sm bg-blue-600 text-white px-3 py-1 rounded-md"
                   >라이브 데모</a
                 >
@@ -290,7 +322,7 @@
                 id="name"
                 name="name"
                 required
-                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+                class="dark:bg-gray-700 dark:border-gray-600 dark:text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
               />
             </div>
             <div>
@@ -300,7 +332,7 @@
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+                class="dark:bg-gray-700 dark:border-gray-600 dark:text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
               />
             </div>
             <div>
@@ -310,7 +342,7 @@
                 id="message"
                 name="message"
                 required
-                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+                class="dark:bg-gray-700 dark:border-gray-600 dark:text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-500"
               ></textarea>
             </div>
             <button
@@ -324,7 +356,7 @@
             <a
               href=""
               target="_blank"
-              class="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
+              class="dark:text-gray-300 flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <i class="fa-brands fa-github"></i>
               <span>Github</span>
@@ -332,7 +364,7 @@
             <a
               href=""
               target="_blank"
-              class="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
+              class="dark:text-gray-300 flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <i class="fa-brands fa-blogger-b"></i>
               <span>Velog</span>
@@ -340,7 +372,7 @@
             <a
               href=""
               target="_blank"
-              class="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
+              class="dark:text-gray-300 flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <i class="fa-brands fa-instagram"></i>
               <span>Instagram</span>
@@ -348,7 +380,7 @@
             <a
               href=""
               target="_blank"
-              class="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
+              class="dark:text-gray-300 flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <i class="fa-regular fa-envelope"></i>
               <span>jjjk0605@naver.com</span>
@@ -359,10 +391,38 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-100 py-6">
+    <footer class="bg-gray-100 dark:bg-gray-800 py-6">
       <div class="container max-w-4xl mx-auto px-6 text-center">
         <p>&copy; 2024 고성인. All rights reserved</p>
       </div>
     </footer>
+    <script>
+      function initialTheme() {
+        const $html = document.documentElement;
+        const $darkModeToggleIcon = $html.querySelector("i");
+        if (!localStorage.theme || localStorage.theme === "light") {
+          $html.classList.remove("dark");
+          $darkModeToggleIcon.className = "fas fa-moon text-gray-700";
+        } else {
+          $html.classList.add("dark");
+          $darkModeToggleIcon.className = "fas fa-sun text-yellow-400";
+        }
+      }
+      function toggleDarkmode() {
+        const $html = document.documentElement;
+        const $darkModeToggleIcon = $html.querySelector("i");
+        if ($html.classList.contains("dark")) {
+          $html.classList.remove("dark");
+          localStorage.theme = "light";
+          $darkModeToggleIcon.className = "fas fa-moon text-gray-700";
+        } else {
+          $html.classList.add("dark");
+          localStorage.theme = "dark";
+          $darkModeToggleIcon.className = "fas fa-sun text-yellow-400";
+        }
+      }
+      document.getElementById("darkModeToggle").addEventListener("click", toggleDarkmode);
+      initialTheme();
+    </script>
   </body>
 </html>
